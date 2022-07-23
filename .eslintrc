@@ -5,6 +5,10 @@
   },
   "extends": ["airbnb/base"],
   "rules": {
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "no-param-reassign": 0,
+    "no-plusplus": "off",
+    "max-len": "off",
+    "linebreak-style": "off"
   }
 }
