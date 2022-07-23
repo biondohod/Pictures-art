@@ -1,5 +1,6 @@
 import modal from './modules/modal';
 import slider from './modules/slider';
+import formsFunction from './modules/forms';
 
 window.addEventListener('DOMContentLoaded', () => {
   modal('.popup-design', '.popup-close', '.button-design', {
@@ -20,4 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   slider('.feedback-slider-item', 'horizontal', 1, 3000, '.main-prev-btn', '.main-next-btn');
   slider('.main-slider-item', 'vertical', 1, 3000);
+
+  formsFunction();
 });

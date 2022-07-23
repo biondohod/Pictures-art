@@ -1,3 +1,5 @@
+let isOpen = false;
+let buttonPressed = false;
 const modal = (modalSelector, closeBtnSelector, triggerSelector, { isDestroyTrigger = false, timer = false, isOpenByScroll = false }) => {
   const calcScrollWidth = () => {
     const div = document.createElement('div');
@@ -12,8 +14,6 @@ const modal = (modalSelector, closeBtnSelector, triggerSelector, { isDestroyTrig
 
   const scrollWidth = calcScrollWidth();
 
-  let isOpen = false;
-  let buttonPressed = false;
   class Modal {
     constructor(modalWindow, closeBtn, trigger, isDestroyTriggerBtn) {
       this._isDestroyTrigger = isDestroyTriggerBtn;
