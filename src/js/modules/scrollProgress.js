@@ -11,7 +11,6 @@ const scrollProgress = () => {
     background-color: rgba(0, 0, 0, 0);
   `;
   const progress = document.createElement('div');
-  progress.classList.add('fff');
   progress.style.cssText = `
     height: 100%;
     width: 0;
