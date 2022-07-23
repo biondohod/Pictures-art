@@ -1,3 +1,4 @@
+import scrollProgress from './modules/scrollProgress';
 import modal from './modules/modal';
 import slider from './modules/slider';
 import formsFunction from './modules/forms';
@@ -5,6 +6,8 @@ import mask from './modules/mask';
 import checkTextInputs from './modules/checkTextInputs';
 
 window.addEventListener('DOMContentLoaded', () => {
+  scrollProgress();
+
   modal('.popup-design', '.popup-close', '.button-design', {
     isDestroyTrigger: false,
     timer: false,
