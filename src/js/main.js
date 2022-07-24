@@ -8,6 +8,7 @@ import showMoreStyles from './modules/showMoreStyles';
 import calc from './modules/calc';
 import tabs from './modules/tabs';
 import pictires from './modules/pictures';
+import accordion from './modules/accordion';
 
 window.addEventListener('DOMContentLoaded', () => {
   scrollProgress();
@@ -43,4 +44,6 @@ window.addEventListener('DOMContentLoaded', () => {
   tabs('.portfolio-menu > li', '.portfolio-block', 'active', '.portfolio-no');
 
   pictires('.sizes-block');
+
+  accordion('.accordion-heading', '.accordion-block');
 });

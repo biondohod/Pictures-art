@@ -904,9 +904,21 @@ h4 {
   border-bottom: 2px dotted #333;
 }
 .often-questions .accordion-block {
-  margin-top: 1rem;
   background-color: #f7e7e6;
+  /* Раскомментировать свойства ниже для css flip анимаций аккордеона */
+  /* margin-top: 1rem;
+  padding: 3rem 4rem; */
+  /* Раскомментировать свойства ниже для js анимации с растягиванием/схлопыванием элемента */
+  max-height: 0;
+  opacity: 0;
+  transition: 0.5s all ease-out;
+  overflow: hidden;
+}
+.often-questions .accordion-block.active-content {
+  margin-top: 1rem;
   padding: 3rem 4rem;
+  opacity: 1;
+  overflow: visible;
 }
 .often-questions .accordion-block:before {
   content: '';
@@ -1735,4 +1747,13 @@ h4 {
 .status-message {
   text-align: center;
   font-size: 18px;
+}
+
+.show {
+  display: flex;
+}
+
+.accordion-heading-active span {
+  color:blueviolet;
+  border-bottom: none !important;
 }
