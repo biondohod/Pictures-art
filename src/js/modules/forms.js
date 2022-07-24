@@ -1,3 +1,5 @@
+import { postData } from '../services/requests';
+
 const formsFunction = () => {
   const forms = document.querySelectorAll('form');
   const uploads = document.querySelectorAll('[name="upload"]');
@@ -73,14 +75,6 @@ const formsFunction = () => {
         form.classList.add('fadeInUp');
       }, 700);
     }, time);
-  };
-
-  const postData = async (url, data) => {
-    const res = await fetch(url, {
-      method: 'POST',
-      body: data,
-    });
-    return res;
   };
 
   let path;

@@ -4,6 +4,7 @@ import slider from './modules/slider';
 import formsFunction from './modules/forms';
 import mask from './modules/mask';
 import checkTextInputs from './modules/checkTextInputs';
+import showMoreStyles from './modules/showMoreStyles';
 
 window.addEventListener('DOMContentLoaded', () => {
   scrollProgress();
@@ -31,4 +32,6 @@ window.addEventListener('DOMContentLoaded', () => {
   mask('[name="phone"]');
   checkTextInputs('[name="name"]');
   checkTextInputs('[name="message"]');
+
+  showMoreStyles('.button-styles', '#styles .row');
 });
