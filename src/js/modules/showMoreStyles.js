@@ -19,12 +19,12 @@ const showMoreStyles = (triggerSelector, wrapperSelector) => {
     });
   };
 
-  const showError = (timer) => {
+  const showError = (text, timer) => {
     const message = document.createElement('div');
     message.classList.add('status-message', 'animated', 'fadeInUp');
     message.innerHTML = `
       <img src="assets/img/failure.png" style="width: 60px;">
-      <div>Что-то пошло не так. Проверьте соединение с интернетом либо повторите попытку позднее</div>
+      <div>${text}</div>
     `;
     stylesWrapper.append(message);
     setTimeout(() => {
@@ -43,7 +43,7 @@ const showMoreStyles = (triggerSelector, wrapperSelector) => {
         btn.remove();
       })
       .catch(() => {
-        showError(3000);
+        showError('Что-то пошло не так. Проверьте соединение с интернетом либо повторите попытку позднее', 3000);
       });
   });
 };
