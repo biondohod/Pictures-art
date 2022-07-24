@@ -7,6 +7,7 @@ import checkTextInputs from './modules/checkTextInputs';
 import showMoreStyles from './modules/showMoreStyles';
 import calc from './modules/calc';
 import tabs from './modules/tabs';
+import pictires from './modules/pictures';
 
 window.addEventListener('DOMContentLoaded', () => {
   scrollProgress();
@@ -40,4 +41,6 @@ window.addEventListener('DOMContentLoaded', () => {
   calc('#size', '#material', '#options', '.promocode', '.calc-price');
 
   tabs('.portfolio-menu > li', '.portfolio-block', 'active', '.portfolio-no');
+
+  pictires('.sizes-block');
 });

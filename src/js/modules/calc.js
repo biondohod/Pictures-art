@@ -57,13 +57,16 @@ const calc = (sizeSelector, materialSelector, optionsSelector, promocodeSelector
             }
             break;
         }
-        sum = (sizePrice * materialPrice) + optionsPrice;
+        sum = Math.round((sizePrice * materialPrice));
+        if (optionsPrice) {
+          sum += optionsPrice;
+        }
       })
       .then(() => {
         if (!sum) {
           price.textContent = 'Для расчета нужно выбрать размер картины и материал картины';
         } else if (promocode) {
-          sum *= 0.7;
+          sum = Math.round(sum * 0.7);
           price.textContent = `Промокод применен! Скидка составит 30% и теперь ваш портрет будет стоить ${sum} рублей`;
         } else {
           price.textContent = `Ваш портрет будет стоить ${sum} рублей`;
