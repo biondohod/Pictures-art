@@ -103,7 +103,7 @@ const formsFunction = () => {
           changeMessage(messages.failure);
         })
         .finally(() => {
-          removeMessage(form, 5000);
+          removeMessage(form, 4000);
         });
     });
   });

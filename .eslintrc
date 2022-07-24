@@ -9,6 +9,7 @@
     "no-param-reassign": 0,
     "no-plusplus": "off",
     "max-len": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "prefer-destructuring": "off"
   }
 }
