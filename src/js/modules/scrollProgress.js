@@ -21,7 +21,14 @@ const scrollProgress = () => {
   `;
   scrollWrapper.append(progress);
   document.body.append(scrollWrapper);
-  const clientWidthPercent = Math.round((document.documentElement.clientWidth) / 100);
+  let clientWidthPercent = Math.round((document.documentElement.clientWidth) / 100);
+
+  window.addEventListener('resize', () => {
+    clientWidthPercent = Math.round((document.documentElement.clientWidth) / 100);
+    const scrollPercent = Math.ceil((window.scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100);
+    progress.style.width = `${clientWidthPercent * scrollPercent}px`;
+  });
+
   window.addEventListener('scroll', () => {
     const scrollPercent = Math.ceil((window.scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100);
     progress.style.width = `${clientWidthPercent * scrollPercent}px`;
