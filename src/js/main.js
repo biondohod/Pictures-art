@@ -9,6 +9,7 @@ import calc from './modules/calc';
 import tabs from './modules/tabs';
 import pictires from './modules/pictures';
 import accordion from './modules/accordion';
+import burger from './modules/burger';
 
 window.addEventListener('DOMContentLoaded', () => {
   scrollProgress();
@@ -46,4 +47,6 @@ window.addEventListener('DOMContentLoaded', () => {
   pictires('.sizes-block');
 
   accordion('.accordion-heading', '.accordion-block');
+
+  burger('.burger-menu', '.burger');
 });

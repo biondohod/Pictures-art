@@ -37,12 +37,14 @@ const showMoreStyles = (triggerSelector, wrapperSelector) => {
   };
 
   btn.addEventListener('click', () => {
+    btn.disabled = true;
     getResource('http://localhost:3000/styles')
       .then((res) => {
         createStyles(res);
         btn.remove();
       })
       .catch(() => {
+        btn.disabled = false;
         showError('Что-то пошло не так. Проверьте соединение с интернетом либо повторите попытку позднее', 3000);
       });
   });
