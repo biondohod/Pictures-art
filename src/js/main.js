@@ -10,6 +10,7 @@ import tabs from './modules/tabs';
 import pictires from './modules/pictures';
 import accordion from './modules/accordion';
 import burger from './modules/burger';
+import scrolling from './modules/scrolling';
 
 window.addEventListener('DOMContentLoaded', () => {
   scrollProgress();
@@ -49,4 +50,6 @@ window.addEventListener('DOMContentLoaded', () => {
   accordion('.accordion-heading', '.accordion-block');
 
   burger('.burger-menu', '.burger');
+
+  scrolling('.pageup', 1645);
 });

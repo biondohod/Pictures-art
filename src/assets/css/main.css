@@ -1757,3 +1757,22 @@ h4 {
   color:blueviolet;
   border-bottom: none !important;
 }
+
+.pageup {
+  opacity: 0;
+  width: 36px ;
+  height: 36px;
+  position: fixed;
+  bottom: 100px;
+  right: 5%;
+  z-index: 30;
+  background-color: #fff;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: 1s all;
+}
+
+.pageup svg {
+  border-radius: 50%;
+}
