@@ -11,6 +11,7 @@ import pictires from './modules/pictures';
 import accordion from './modules/accordion';
 import burger from './modules/burger';
 import scrolling from './modules/scrolling';
+import drop from './modules/drop';
 
 window.addEventListener('DOMContentLoaded', () => {
   scrollProgress();
@@ -52,4 +53,6 @@ window.addEventListener('DOMContentLoaded', () => {
   burger('.burger-menu', '.burger');
 
   scrolling('.pageup', 1645);
+
+  drop();
 });
