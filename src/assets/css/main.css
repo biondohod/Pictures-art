@@ -206,6 +206,7 @@ h4 {
   text-decoration: none;
 }
 .main {
+  min-width: 320px;
   background-color: #f7e7e6;
   padding-top: 3rem;
   /* Making it beautiful */
@@ -1775,4 +1776,12 @@ h4 {
 
 .pageup svg {
   border-radius: 50%;
+}
+
+.main-slider-item {
+  max-width: 100%;
+}
+
+.main-slider-item img {
+  max-width: 100%;
 }
